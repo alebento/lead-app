@@ -3,7 +3,7 @@
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon style="margin-right: 12px;">add_circle</mat-icon>
-        Invited {{ leads.length }}
+        Invited
       </ng-template>
       <app-invited-leads [leads]="leads" (leadUpdated)="updateLeads($event)"></app-invited-leads>
     </mat-tab>
