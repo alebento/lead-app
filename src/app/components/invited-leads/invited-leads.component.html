@@ -1,0 +1,42 @@
+<div class="invited__list">
+    <mat-card *ngFor="let lead of filteredLeads" appearance="outlined">
+        <mat-card-header>
+            <div class="invited__avatar" mat-card-avatar>{{ lead.contactFirstName.slice(0,1) }}</div>
+            <mat-card-title>{{ lead.contactFirstName }}</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider class="invited__divider"></mat-divider>
+        <mat-card-content>
+            <div class="invited__content-row spaccing">
+                <span class="invited__info-row">
+                    <mat-icon class="example-tab-icon" style="margin-right: 12px;">pin_drop</mat-icon> {{ lead.suburb }}
+                </span>
+                <div class="invited__info-row">
+                    <mat-icon class="example-tab-icon" style="margin-right: 12px;">business_center</mat-icon> {{ lead.category }}
+                </div>
+                <span>
+                    Job ID: {{ lead.id }}
+                </span>
+            </div>
+            <div class="invited__content-row">
+                <strong>Description:</strong> &nbsp;{{ lead.description }}
+            </div>
+        </mat-card-content>
+        <mat-divider class="invited__divider"></mat-divider>
+        <mat-card-actions>
+            <div class="invited__content-row between">
+                <div>
+                    <button mat-fab extended (click)="acceptLead(lead)" style="margin-right: 16px;">
+                        <mat-icon>check</mat-icon>
+                        Accept
+                    </button>
+                    <button mat-fab extended (click)="declineLead(lead)">
+                        <mat-icon>close</mat-icon>
+                        Decline
+                    </button>
+                </div>
+                <div class="centering"><b>{{ lead.price | currency }}</b> Lead Invitation</div>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

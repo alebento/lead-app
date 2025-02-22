@@ -1,0 +1,80 @@
+.invited__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+mat-card {
+    width: 48%;
+    margin: auto;
+    border: 1px var(--orange-pure) solid;
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
+}
+
+mat-card-header {
+    padding: 16px 0 0 16px;
+}
+
+mat-card-title {
+    font-size: 1.2em;
+}
+
+mat-card-subtitle {
+    color: #bababa;
+}
+
+mat-card-actions {
+    padding: 0 0 16px 0;
+}
+
+::ng-deep .mat-mdc-card-avatar {
+    margin-bottom: 0;
+}
+
+::ng-deep .mat-mdc-fab {
+    background-color: var(--orange-pure) !important;
+    color: white !important;
+}
+
+.invited__avatar {
+    width: 48px;
+    height: 48px;
+    background-color: var(--orange-pure);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 2em;
+    font-weight: 600;
+    color: white;
+    margin-right: 16px;
+}
+
+.invited__content-row {
+    display: flex;
+    padding: 8px 0;
+}
+
+.invited__info-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.between {
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.spaccing {
+    gap: 26px
+}
+
+.centering {
+    align-content: center;
+}
+
+.invited__divider {
+    border: 1px solid #efefef;
+    margin: 1rem 0;
+}
